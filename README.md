@@ -1,4 +1,4 @@
-# LEAGUE OF LEGEND MATCHES ANALYSIS
+# LEAGUE OF LEGEND MATCH PREDICTION
 
 ===
 
@@ -44,7 +44,8 @@ League of Legends is one of the most popular games ever existed, and has one of 
  
 ##### Data-Focused Questions
 
-- Which features are correlated with the target variable (hasWon)
+- Which features are correlated with the target variable (hasWon)?
+- Does killed or lost a baron nashor or rift herald increase or decrease the chance of winning?
  
 ##### Overall Project-Focused Questions
 - What will the end product look like?
@@ -127,15 +128,13 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
  
 #### 2. ACQUIRE
 - [x]  Create .gitignore
-- [x]  Create env file with log-in credentials
-- [x]  Store env file in .gitignore to ensure the security of sensitive data
 - [x]  Create wrangle.py module
 - [x]  Store functions needed to acquire the dataset
 - [x]  Ensure all imports needed to run the functions are inside the wrangle.py document
 - [x]  Using Jupyter Notebook
-     - [x]  Run all required imports
+     - [x] Run all required imports
      - [x] Import functions from wrangle.py module
-     - [x]  Summarize dataset using methods and document observations
+     - [x] Summarize dataset using methods and document observations
  
 #### 3. PREPARE
 Using Jupyter Notebook
@@ -144,7 +143,6 @@ Using Jupyter Notebook
 - [x]  Clean data
 - [x]  Features need to be turned into numbers
 - [x]  Categorical features or discrete features need to be numbers that represent those categories
-- [x]  Continuous features may need to be standardized to compare like datatypes
 - [x]  Address missing values, data errors, unnecessary data, renaming
 - [x]  Split data into train, validate, and test samples
 Using Python Scripting Program (Jupyter Notebook)
@@ -165,7 +163,7 @@ Using Jupyter Notebook:
      - [x] Explain plan of action as deduced from work to this point
  
 #### 5. MODEL & EVALUATE
-- [x] No modeling was necessary for this project, however, modeling could be added to next steps if desired.
+- [x] Modeling was necessary for this project to see if the features is the best to predict the match outcome. Select the best model to test on unseen data
 
 #### 6. DELIVERY
 - [x]  Prepare final notebook in Jupyter Notebook
@@ -175,11 +173,10 @@ Using Jupyter Notebook:
      - [x]  Document takeaways
      - [x]  Comment code thoroughly
 
- 
 ## IV. PROJECT MODULES:
 - [x] wrangle.py - provides reproducible python code to automate acquiring, preparing, and splitting the data
 - [x] explore.py - provides reproducible python code to automate plots and statistical test
-- [x] model.py - provides reproducible python code to automate models (decision tree, knn, random forest), create baseline, 
+- [x] model.py - provides reproducible python code to automate models (decision tree, knn, random forest), create baseline
    
 ## V. PROJECT REPRODUCTION:
 ### Steps to Reproduce

@@ -1,4 +1,4 @@
-# STEAM SALES ANALYSIS
+# LEAGUE OF LEGEND MATCHES ANALYSIS
 
 ===
 
@@ -34,40 +34,36 @@ Table of Contents
  
  
 #### 1.  GOAL:
-The goal of this project is to _____________
- 
+The goal of this project is to create a model to predict the outcome of a League of Legends match based upon player performance in prior games. Due to the tremendous amount of data available, I anticipate that a model trained on a sufficiently large dataset can achieve a high accuracy at this prediction task.
  
 #### 2. DESCRIPTION:
-
- 
+League of Legends is one of the most popular games ever existed, and has one of the most important competitive games. In this game, each team (blue and red) fight to take out the enemy's nexus to win the game. Like all strategy games, we have different objectives in the game which give a certain advantage in the game. This information about these objectives is what will help us make our winning prediction model. To increase our chances to win a game, there are lots of different objectives and events to do, fights to win to increase the power of your champion, as well as winning map terrain by taking down turrets and putting vision on the map.
  
 #### 3.INITIAL QUESTIONS:
 
  
 ##### Data-Focused Questions
 
-
+- Which features are correlated with the target variable (hasWon)
  
 ##### Overall Project-Focused Questions
 - What will the end product look like?
     + A GitHub Repository containing an end-to-end data science pipeline project of personal choosing.
 - What format will it be in?
     + A GitHub Repository with a .gitignore, README.md, wrangle.py, work.ipynb, report.ipynb.  
-- Who will it be delivered to?
-   + Peers Review Process and Instructors
-- How will it be used?
-   + To display unique interests and skillset as an individual within a cohort.
 - How will I know I'm done?
    + When I have a question, answer thorugh statistics/visualization, and modeling.
 - What is my MVP?
    + A project that runs thorugh the entire pipeline to include modeling, while asking and answering one question. 
 - How will I know it's good enough?
-   + When I have imporved upon my MVP. 
+   + Has least drop off from train to validate to unseen the model note overfitting. 
  
 
 #### 4. FORMULATING HYPOTHESES
 
- 
+ Null hypothesis: Our target variable not independent to the selected features
+
+ Alternative hypothesis: Our target variable dependent to the selected features
  
 #### 5. DELIVERABLES:
 - [x] README file - provides an overview of the project and steps for project reproduction
@@ -83,12 +79,38 @@ The goal of this project is to _____________
 The final DataFrame used to explore the data for this project contains the following variables (columns).  The variables, along with their data types, are defined below:
  
  
-|  Variables             |    Definition                              |    DataType             |
-| :--------------------:   | :----------------------------------------: | :--------------------: |
-column_name    |  Description                        |  datatype   |
+|  Variables             |    Definition                                               |    DataType             |
+| :--------------------: | :---------------------------------------------------:       | :--------------------:  |
+| gameId                 | Riot API unique game identifier                             |         int64           |
+| gameDuration           | Game duration in milliseconds                               |         int64           |
+| hasWon                 | If blue team has won the game or not                        |         int64           |
+| frame                  | Time in the game in minutes (min)                           |         int64           |
+| goldDiff               | Blue team gold difference                                   |         int64           |
+| expDiff                | Blue team experience difference                             |         int64           |
+| champLevelDiff         | Blue team champions level difference                        |         float64         |
+| isFirstTower           | If the blue team destroyed the first tower (gold bonus)     |         int64           |
+| isFirstBlood           | If the blue team killed the first enemy (gold bonus)        |         int64           |
+| killedFireDrake        | Number of fire dragons killed by the blue team              |         int64           |
+| killedWaterDrake       | Number of water dragons killed by the blue team             |         int64           |
+| killedAirDrake         | Number of air dragons killed by the blue team               |         int64           |
+| killedEarthDrake       | Number of earth dragons killed by the blue team             |         int64           |
+| killedElderDrake       | Number of elder dragons killed by the blue team             |         int64           |
+| lostFireDrake          | Number of fire dragons killed by the red team               |         int64           |
+| lostWaterDrake         | Number of water dragons killed by the red team              |         int64           |
+| lostAirDrake           | Number of air dragons killed by the red team                |         int64           |
+| lostEarthDrake         | Number of earth dragons killed by the red team              |         int64           |
+| lostElderDrake         | Number of elder dragons killed by the red team              |         int64           |
+| killedBaronNashor      | Number of Barons Nashor killed by the blue team             |         int64           |
+| lostBaronNashor        | Number of Barons Nashor killed by the red team              |         int64           |
+| killedRiftHerald       | Number of Rift Heralds killed by the blue team              |         int64           |
+| lostRiftHerald         | Number of Rift Heralds killed by the red team               |         int64           |
+| kills                  | Blue team total kills                                       |         int64           |
+| deaths                 | Blue team total deaths                                      |         int64           |
+| assists                | Blue team total assists                                     |         int64           |
+| wardsPlaced            | Blue team total wards placed                                |         int64           |
+| wardsDestroyed         | Blue team total enemy wards destroyed                       |         int64           |
+| wardsLost              | Blue team total wards destroyed by the red team             |         int64           |
 
-
- 
 ## III. PROJECT PLAN - USING THE DATA SCIENCE PIPELINE:
 The following outlines the process taken through the Data Science Pipeline to complete this project. 
  
@@ -137,7 +159,7 @@ Using Jupyter Notebook:
      - [x]  Run at least two statistical tests
      - [x]  Document findings
 - [x]  Create visualizations with the intent to discover variable relationships
-     - [x]  Identify variables related to _________
+     - [x]  Identify variables related to hasWon
      - [x]  Identify any potential data integrity issues
 - [x]  Summarize conclusions, provide clear answers, and summarize takeaways
      - [x] Explain plan of action as deduced from work to this point
@@ -146,13 +168,6 @@ Using Jupyter Notebook:
 - [x] No modeling was necessary for this project, however, modeling could be added to next steps if desired.
 
 #### 6. DELIVERY
-- [x]  Prepare a five-minute presentation using Google Sheets
-     - [x]  Include an introduction of the project and goals
-     - [x]  Provide an executive summary of findings, key takeaways, recommendations, and rationale
-     - [x]  Create a walkthrough of the analysis 
-     - [x]  Include 2 presentation-worthy visualizations that support the problem and recommendation
-     - [x]  Provide final takeaways, recommend a course of action, and next steps
-     - [x]  Be prepared to answer questions following the presentation
 - [x]  Prepare final notebook in Jupyter Notebook
      - [x]  Create clear walk-though of the Data Science Pipeline using headings and dividers
      - [x]  Explicitly define questions asked during the initial analysis
@@ -160,20 +175,16 @@ Using Jupyter Notebook:
      - [x]  Document takeaways
      - [x]  Comment code thoroughly
 
-
-
- 
  
 ## IV. PROJECT MODULES:
 - [x] wrangle.py - provides reproducible python code to automate acquiring, preparing, and splitting the data
- 
-  
+- [x] explore.py - provides reproducible python code to automate plots and statistical test
+- [x] model.py - provides reproducible python code to automate models (decision tree, knn, random forest), create baseline, 
+   
 ## V. PROJECT REPRODUCTION:
 ### Steps to Reproduce
- - [x] You will need ________________
-- [x] Store that env file locally in the repository
 - [x] Make .gitignore and confirm .gitignore is hiding your env.py file
-- [x] Clone our repo (including the wrangle.py)
-- [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, and sklearn
-- [x] Follow steps as outlined in the README.md. and mathias_work.ipynb
+- [x] Clone the repo (including the wrangle.py, explore.py, model.py)
+- [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, scipy, and sklearn
+- [x] Follow steps as outlined in the README.md
 - [x] Run Final_Report.ipynb to view the final product

@@ -27,7 +27,7 @@ Table of Contents
 [6. Product Delivery](#6-delivery)<br>
 * IV. [Project Modules](#iv-project-modules)<br>
 * V. [Project Reproduction](#v-project-reproduction)<br>
-* VI. [KeyTakeaway](#vi-key-takeaway)<br>
+* VI. [Key Takeaway](#vi-key-takeaway)<br>
  
  
  

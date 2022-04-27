@@ -187,7 +187,7 @@ Using Jupyter Notebook:
 - [x] Follow steps as outlined in the README.md
 - [x] Run Final_Report.ipynb to view the final product
 
-## VI.KEY TAKEAWAY:
+## VI. KEY TAKEAWAY:
 ### Conclusion
 This individual project aimed to identify predictors of match wins for the game Leauge of Legend. The matches outcome data was from kaggle and explored using visualization and statistical tests, to identify which features to use in model creation. I then applied models, including Decision Tree, KNN, and Random Forest and was able to beat baseline predictions by 11.56%.
 

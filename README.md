@@ -27,6 +27,7 @@ Table of Contents
 [6. Product Delivery](#6-delivery)<br>
 * IV. [Project Modules](#iv-project-modules)<br>
 * V. [Project Reproduction](#v-project-reproduction)<br>
+* VI. [KeyTakeaway](#vi-key-takeaway)<br>
  
  
  
@@ -129,7 +130,7 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 #### 2. ACQUIRE
 - [x]  Create .gitignore
 - [x]  Create wrangle.py module
-- [x]  Store functions needed to acquire the dataset
+- [x]  Store functions needed to acquire the dataset from kaggle
 - [x]  Ensure all imports needed to run the functions are inside the wrangle.py document
 - [x]  Using Jupyter Notebook
      - [x] Run all required imports
@@ -185,3 +186,13 @@ Using Jupyter Notebook:
 - [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, scipy, and sklearn
 - [x] Follow steps as outlined in the README.md
 - [x] Run Final_Report.ipynb to view the final product
+
+## VI.KEY TAKEAWAY:
+### Conclusion
+This individual project aimed to identify predictors of match wins for the game Leauge of Legend. The matches outcome data was from kaggle and explored using visualization and statistical tests, to identify which features to use in model creation. I then applied models, including Decision Tree, KNN, and Random Forest and was able to beat baseline predictions by 11.56%.
+
+### Recommendations
+- From modeling, it suggested that feautres like get first turret, first blood, killed drake, elder drake and baron nashor. These features were the best at predicting match otucome.
+
+### Next Steps
+- With more time, I would like to use rfe or kbest as features selection for my models, it might be able to improve model accuracy. And look at other features like kills, death, assist those can be predict the match outcome.

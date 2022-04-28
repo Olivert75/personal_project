@@ -128,6 +128,7 @@ Plan➜ Acquire ➜ Prepare ➜ Explore ➜ Model & Evaluate ➜ Deliver
 - [x]  Draft starting hypothesis
  
 #### 2. ACQUIRE
+- [x]  Get the csv from kaggle: https://www.kaggle.com/datasets/bobbyscience/league-of-legends-soloq-ranked-games
 - [x]  Create .gitignore
 - [x]  Create wrangle.py module
 - [x]  Store functions needed to acquire the dataset from kaggle
@@ -181,8 +182,12 @@ Using Jupyter Notebook:
    
 ## V. PROJECT REPRODUCTION:
 ### Steps to Reproduce
-- [x] Make .gitignore and confirm .gitignore is hiding your env.py file
+- [x] Make sure to download the csv from kaggle (https://www.kaggle.com/datasets/bobbyscience/league-of-legends-soloq-ranked-games) to run the notebook 
 - [x] Clone the repo (including the wrangle.py, explore.py, model.py)
+- [x] Cope this line into your terminal 
+```bash
+git clone git@github.com:Olivert75/personal_project.git
+```
 - [x] Import python libraries:  pandas, matplotlib, seaborn, numpy, scipy, and sklearn
 - [x] Follow steps as outlined in the README.md
 - [x] Run Final_Report.ipynb to view the final product
